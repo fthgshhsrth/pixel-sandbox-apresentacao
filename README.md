@@ -1,6 +1,6 @@
 # Pixel Sandbox
 
-RPG de mundo aberto em pixel art, com personagens em 2D dentro de um mundo em 3D. Numa era medieval sombria, você escolhe um povo, leva exércitos para a guerra e decide o que fazer com as aldeias que conquista.
+RPG de mundo aberto em pixel art, com personagens em 2D dentro de um mundo em 3D. Numa era medieval sombria, você escolhe um povo, leva exércitos para a guerra, planta, pesca, enfrenta o frio do inverno e decide o que fazer com as aldeias que conquista.
 
 > **Aviso:** o jogo tem violência explícita, e esta página mostra uma cena de morte com muito sangue.
 
@@ -9,6 +9,21 @@ RPG de mundo aberto em pixel art, com personagens em 2D dentro de um mundo em 3D
 ![Soldados lutando no meio de uma aldeia goblin, sob a luz vermelha do clima de guerra](imagens/batalha.png)
 
 *Ataque a uma aldeia goblin. A tela avermelha enquanto durar a guerra.*
+
+## Controles
+
+| Tecla | Ação |
+|---|---|
+| WASD ou setas | Andar |
+| Shift | Correr |
+| Clique ou F | Usar o que está na mão: bater, cortar, arar, plantar, pescar |
+| E | Conversar, entrar, pegar, colher |
+| 1 a 5 | Escolher o que fica na mão |
+| Tab ou I | Inventário, equipamento e criar itens |
+| J | Caderno |
+| Z e X | Girar a câmera |
+| Roda do mouse | Aproximar ou afastar |
+| Esc | Pausa |
 
 ## Quatro povos, um pacto
 
@@ -47,7 +62,7 @@ Cada povo chama o exército do seu jeito:
 
 ## Combate e morte
 
-O combate é em tempo real, com desmembramento conforme a vida cai: sangue vermelho, sangue verde nos zumbis e poeira nos esqueletos. Esqueleto, zumbi, lobo, vaca, galinha, veado e corvo têm sons e comportamento próprios.
+O combate é em tempo real, com desmembramento conforme a vida cai: sangue vermelho, sangue verde nos zumbis e poeira nos esqueletos. Esqueleto, zumbi, lobo, vaca, galinha, veado e corvo têm sons e comportamento próprios. Com uma espada na mão, o dano sobe.
 
 Morrer tem cena própria, conforme quem te matou:
 
@@ -61,32 +76,9 @@ Morrer tem cena própria, conforme quem te matou:
 | Goblins | Furam as pernas até você cair de joelhos, e você morre ajoelhado |
 | Elfo | Flechas te pregam numa árvore, e você morre de pé |
 
-![Quatro quadros da cena de morte do elfo, com o herói caído, flechas cravadas e muito sangue](imagens/morte_elfo.png)
+![Quatro quadros da cena de morte do elfo: o herói pregado numa árvore por flechas, a estocada e o corte na garganta](imagens/morte_elfo.png)
 
-*Quatro momentos da primeira versão da cena de morte do elfo.*
-
-## Viver no mundo
-
-- **Mapa:** 1920 x 1440 tiles, com relevo, água e árvores que balançam com o vento.
-- **Biomas:** campo, floresta, deserto e montanha, cada um com seus sons.
-- **Tempo:** um dia dura 35 minutos reais, com sol, sombras e luzes noturnas.
-- **Câmera:** gira de 90 em 90 graus, com minimapa e névoa de exploração.
-- **Fome e descanso:** do fim da tarde até a noite dá para dormir na fogueira, o que salva o jogo e pula para o dia seguinte.
-- **Inventário:** itens são arrastados entre a mochila, a mão (teclas 1 a 5) e o equipamento: cabeça, peito, pernas, botas, amuleto e mochila, que aumenta os espaços. Criar itens fica no próprio inventário.
-- **Barracas:** compra-se com moedas nas aldeias que não são inimigas, e rouba-se de graça durante um ataque ou depois da conquista.
-- **Interiores 3D:** casas, ocas, salões e uma padaria. O sobrado e a torre élfica têm segundo andar.
-- **Caderno (J):** tudo o que você lê e ouve vai sendo anotado, em ordem, e cada livro ou pergaminho mostra os trechos que ainda faltam. A história virá aos pedaços, de livros nas casas, conversas e missões.
-- **Frio:** no inverno, nas noites de outono e na montanha o corpo esfria, a tela vai ficando azulada e, no limite, você perde vida. Fogueira esquenta, e o deserto nunca dá frio.
-
-### Três dificuldades
-
-- **Relaxante:** ninguém briga, só você pode. Não tem fome e você entra onde quiser.
-- **Normal:** o jogo como ele é.
-- **Difícil:** ao morrer, seus itens ficam no chão por 3 dias. A fome é mais rápida, e as aldeias rivais sobem de nível mais rápido.
-
-![Interior 3D da padaria, com forno, balcão e mesas com pão](imagens/padaria.png)
-
-*A padaria por dentro.*
+*A cena de morte do elfo.*
 
 ## Estações do ano
 
@@ -96,10 +88,14 @@ Primavera, verão, outono e inverno, com 7 dias cada, em todos os biomas menos o
 
 *Inverno no campo.*
 
+### Frio
+
+No inverno, nas noites de outono e na montanha, o corpo esfria. Uma barra azul aparece embaixo da fome, a tela vai ficando azulada e, no limite, você perde vida. A fogueira esquenta, e o deserto nunca dá frio.
+
 ## Cultivo
 
 - **Arar:** com a enxada, a terra vira canteiro de verdade, e canteiros vizinhos se emendam numa plantação.
-- **Plantar:** só a até 8 tiles de água. Terra arada longe da água seca em um minuto. Deserto e montanha são pedra e areia, não solo.
+- **Água:** só se planta a até 8 tiles de água. Terra arada longe da água seca em um minuto. Deserto e montanha são pedra e areia, não solo.
 - **Plantas:** rabanete (3 dias), nabo (4), beterraba (5), trigo (6) e maconha (7). Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
 - **Inverno:** nada se planta, e o que estiver plantado morre de frio.
 
@@ -117,7 +113,7 @@ Mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos no campo e na fl
 
 ## Ferramentas e pesca
 
-- **Do chão:** galhos e pedras pequenas aparecem pelo campo e pela floresta, e mudam de lugar a cada dia. Árvores derrubadas soltam galhos, e rochas quebradas soltam pedras. Itens caídos flutuam e ganham borda amarela quando você chega perto.
+- **Do chão:** galhos e pedras pequenas aparecem pelo campo e pela floresta e mudam de lugar a cada dia. Árvores derrubadas soltam galhos, e rochas quebradas soltam pedras. Itens caídos flutuam e ganham borda amarela quando você chega perto.
 - **Improvisadas:** espada, machado e picareta de pedra amarrada num galho.
 - **De ferro:** as mesmas, mais fortes. O minério vem das rochas de ferro da montanha, quebradas com picareta, ou das barracas, e custa caro.
 - **Na mão:** a ferramenta aparece segurada o tempo todo, e cada uma tem o seu golpe. O machado derruba árvores mais rápido, a picareta quebra rochas mais rápido e a espada aumenta o dano.
@@ -127,13 +123,35 @@ Mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos no campo e na fl
 
 *O peixe saindo da água.*
 
+## Viver no mundo
+
+- **Mapa:** 1920 x 1440 tiles, com relevo, água e árvores que balançam com o vento.
+- **Biomas:** campo, floresta, deserto e montanha, cada um com seus sons.
+- **Tempo:** um dia dura 35 minutos reais, com sol, sombras e luzes noturnas. O nome da estação aparece junto com o dia.
+- **Câmera:** gira de 90 em 90 graus, com minimapa e névoa de exploração.
+- **Fome e descanso:** do fim da tarde até a noite dá para dormir na fogueira, o que salva o jogo e pula para o dia seguinte.
+- **Inventário:** itens são arrastados entre a mochila, a mão e o equipamento: cabeça, peito, pernas, botas, amuleto e mochila, que aumenta os espaços. Criar itens fica no próprio inventário.
+- **Barracas:** compra-se com moedas nas aldeias que não são inimigas, e rouba-se de graça durante um ataque ou depois da conquista.
+- **Interiores 3D:** casas, ocas, salões e uma padaria. O sobrado e a torre élfica têm segundo andar.
+- **Caderno:** tudo o que você lê e ouve vai sendo anotado em ordem, e cada livro ou pergaminho mostra os trechos que ainda faltam. A história virá aos pedaços, de livros nas casas, conversas e missões.
+
+### Três dificuldades
+
+- **Relaxante:** ninguém briga, só você pode. Não tem fome e você entra onde quiser.
+- **Normal:** o jogo como ele é.
+- **Difícil:** ao morrer, seus itens ficam no chão por 3 dias. A fome é mais rápida, e as aldeias rivais sobem de nível mais rápido.
+
+![Interior 3D da padaria, com forno, balcão e mesas com pão](imagens/padaria.png)
+
+*A padaria por dentro.*
+
 ## O editor dentro do jogo
 
-O mapa é feito no próprio jogo. Basta clicar em qualquer coisa para ver as opções dela. Dá para pintar o terreno, mudar o relevo, arrastar muros em linha reta, demarcar biomas e aldeias e definir as rotas dos NPCs. O teste começa em qualquer ponto do mapa.
+O mapa é feito no próprio jogo. Basta clicar em qualquer coisa para ver as opções dela. Dá para pintar o terreno, mudar o relevo, arrastar muros em linha reta, demarcar biomas e aldeias, definir as rotas dos NPCs e assistir a todas as cenas de morte. O teste começa em qualquer ponto do mapa, com um painel para pular o dia, mudar a estação, ganhar itens e montar aldeias prontas.
 
-![Editor de mapa com um NPC selecionado, seu raio de caminhada no chão e as opções no painel à direita](imagens/editor.png)
+![Editor de mapa com a aba de cenas de morte aberta](imagens/editor.png)
 
-*Um NPC selecionado no editor, com o raio de caminhada no chão.*
+*O editor, com a lista de cenas de morte.*
 
 ## A história
 
@@ -171,8 +189,8 @@ Quem segue a Ordem primeiro recebe proteção e prestígio, até descobrir um se
 ## O que ainda vem
 
 - Missões e a história principal.
-- Peixes, receitas novas e mais coisas para o frio.
 - As aldeias e os personagens no mapa.
+- Peixes, receitas novas e mais coisas para o frio.
 - Recompensas maiores por derrubar um chefe ou um povo inteiro.
 - A ideia é virar um MMORPG com história, mas ainda não há rede nem servidor.
 
