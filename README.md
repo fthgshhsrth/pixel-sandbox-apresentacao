@@ -56,26 +56,27 @@ Morrer tem cena própria, conforme quem te matou:
 | Esqueleto | Arranca seus órgãos, com risada sádica |
 | Zumbi | Te come |
 | Lobo | Te dilacera e uiva |
-| Humano | Uma espadada só |
-| Orc | Clava na cabeça |
-| Goblins | Vários te furando sem parar |
-| Elfo | Flechas, estocada e corte na garganta |
+| Humano | Uma espadada arranca a cabeça; o corpo fica de pé jorrando, ajoelha e tomba |
+| Orc | A clava esmaga a cabeça, joga o corpo de costas e abre a barriga |
+| Goblins | Furam as pernas até você cair de joelhos, e você morre ajoelhado |
+| Elfo | Flechas te pregam numa árvore, e você morre de pé |
 
 ![Quatro quadros da cena de morte do elfo, com o herói caído, flechas cravadas e muito sangue](imagens/morte_elfo.png)
 
-*Quatro momentos da cena de morte do elfo.*
+*Quatro momentos da primeira versão da cena de morte do elfo.*
 
 ## Viver no mundo
 
-- **Mapa:** 1920 x 1440 tiles, com relevo, água, estradas e árvores que balançam com o vento.
+- **Mapa:** 1920 x 1440 tiles, com relevo, água e árvores que balançam com o vento.
 - **Biomas:** campo, floresta, deserto e montanha, cada um com seus sons.
 - **Tempo:** um dia dura 35 minutos reais, com sol, sombras e luzes noturnas.
 - **Câmera:** gira de 90 em 90 graus, com minimapa e névoa de exploração.
 - **Fome e descanso:** do fim da tarde até a noite dá para dormir na fogueira, o que salva o jogo e pula para o dia seguinte.
-- **Itens:** inventário, armaduras, amuletos, mochilas, baús e criação de itens.
+- **Inventário:** itens são arrastados entre a mochila, a mão (teclas 1 a 5) e o equipamento: cabeça, peito, pernas, botas, amuleto e mochila, que aumenta os espaços. Criar itens fica no próprio inventário.
 - **Barracas:** compra-se com moedas nas aldeias que não são inimigas, e rouba-se de graça durante um ataque ou depois da conquista.
 - **Interiores 3D:** casas, ocas, salões e uma padaria. O sobrado e a torre élfica têm segundo andar.
-- **Escritos:** livros e pergaminhos em pedaços, para juntar aos poucos.
+- **Caderno (J):** tudo o que você lê e ouve vai sendo anotado, em ordem, e cada livro ou pergaminho mostra os trechos que ainda faltam. A história virá aos pedaços, de livros nas casas, conversas e missões.
+- **Frio:** no inverno, nas noites de outono e na montanha o corpo esfria, a tela vai ficando azulada e, no limite, você perde vida. Fogueira esquenta, e o deserto nunca dá frio.
 
 ### Três dificuldades
 
@@ -86,6 +87,45 @@ Morrer tem cena própria, conforme quem te matou:
 ![Interior 3D da padaria, com forno, balcão e mesas com pão](imagens/padaria.png)
 
 *A padaria por dentro.*
+
+## Estações do ano
+
+Primavera, verão, outono e inverno, com 7 dias cada, em todos os biomas menos o deserto. A mudança é dia a dia: no outono as copas ficam alaranjadas e as folhas caem, no inverno a neve cobre o chão e as árvores ficam peladas, e na primavera a neve derrete em manchas até a grama voltar.
+
+![Campo no inverno, com chão coberto de neve e árvores sem folhas](imagens/inverno.png)
+
+*Inverno no campo.*
+
+## Cultivo
+
+- **Arar:** com a enxada, a terra vira canteiro de verdade, e canteiros vizinhos se emendam numa plantação.
+- **Plantar:** só a até 8 tiles de água. Terra arada longe da água seca em um minuto. Deserto e montanha são pedra e areia, não solo.
+- **Plantas:** rabanete (3 dias), nabo (4), beterraba (5), trigo (6) e maconha (7). Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
+- **Inverno:** nada se planta, e o que estiver plantado morre de frio.
+
+![Canteiro com rabanete, nabo, beterraba, trigo e maconha em várias fases](imagens/cultivo.png)
+
+*Cada linha uma planta, da semente até a colheita.*
+
+### Plantas do inverno
+
+Mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos no campo e na floresta, só no inverno, e brilham no escuro enquanto têm fruto. Depois de colhidos, voltam a dar fruto em dois dias. Às vezes vem uma muda, que pode ser plantada em outro lugar. Quando o inverno acaba, todos secam.
+
+![Três plantas brilhando à noite na neve: uma moita de bolinhas brancas, um lírio azul e cogumelos claros](imagens/plantas_inverno.png)
+
+*As plantas do inverno à noite.*
+
+## Ferramentas e pesca
+
+- **Do chão:** galhos e pedras pequenas aparecem pelo campo e pela floresta, e mudam de lugar a cada dia. Árvores derrubadas soltam galhos, e rochas quebradas soltam pedras. Itens caídos flutuam e ganham borda amarela quando você chega perto.
+- **Improvisadas:** espada, machado e picareta de pedra amarrada num galho.
+- **De ferro:** as mesmas, mais fortes. O minério vem das rochas de ferro da montanha, quebradas com picareta, ou das barracas, e custa caro.
+- **Na mão:** a ferramenta aparece segurada o tempo todo, e cada uma tem o seu golpe. O machado derruba árvores mais rápido, a picareta quebra rochas mais rápido e a espada aumenta o dano.
+- **Pesca:** de frente para a água, você lança a linha e a boia fica boiando. Quando o peixe morde, aparece "CLIQUE!" e, depois de fisgar, "CLIQUE RÁPIDO!" para puxar até o peixe pular para fora da água. Os peixes como item ainda vão entrar.
+
+![Personagem na beira da água puxando um peixe, que pula para fora entre respingos](imagens/pesca.png)
+
+*O peixe saindo da água.*
 
 ## O editor dentro do jogo
 
@@ -131,6 +171,7 @@ Quem segue a Ordem primeiro recebe proteção e prestígio, até descobrir um se
 ## O que ainda vem
 
 - Missões e a história principal.
+- Peixes, receitas novas e mais coisas para o frio.
 - As aldeias e os personagens no mapa.
 - Recompensas maiores por derrubar um chefe ou um povo inteiro.
 - A ideia é virar um MMORPG com história, mas ainda não há rede nem servidor.
