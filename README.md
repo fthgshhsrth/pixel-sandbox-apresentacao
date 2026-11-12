@@ -63,14 +63,27 @@ A lua tem oito fases e muda a cada dia do jogo, em ciclos de oito dias: lua nova
 |---|---|
 | Lua nova | A noite é a mais escura, e os bichos hostis enxergam pouco: dá para passar por perto sem ser notado |
 | Fases do meio | Aos poucos a noite clareia ou escurece |
-| Lua cheia | A noite fica clara, os bichos hostis enxergam bem mais longe, os lobos uivam com mais frequência e há uivos até no campo |
+| Lua cheia | **Lua de sangue:** a lua fica vermelha e pingando, a luz e a névoa da noite ficam avermelhadas, os monstros ficam 50% mais fortes e aparecem o dobro, e os lobos uivam até no campo |
 
 Ao anoitecer numa lua cheia ou nova, um aviso conta o que esperar. Dormir pula para o dia seguinte e, portanto, para a próxima fase.
 
 ### Povos e aldeias
-- **Seis povos:** humanos, orcs, elfos, goblins, **anões** e **gigantes**, cada um com homens e mulheres, civis, soldados, chefe, falas e construções próprias.
+- **Oito povos:** humanos, orcs, elfos, goblins, **anões**, **gigantes**, **gnomos** e **infernais**, cada um com homens e mulheres, civis, soldados, chefe, falas e construções próprias.
 - **Anões:** baixos, barbudos e obcecados por ferro. Vivem em cavernas com abertura nas montanhas, têm forja, salão e a melhor defesa do jogo. Convocam o exército batendo a bigorna de guerra.
 - **Gigantes:** têm o dobro da altura de um humano, moram em casas de lajes de pedra em pé e são os mais fortes e mais lentos. Convocam o exército com o tambor de guerra.
+- **Gnomos:** minúsculos, de gorro pontudo e barba, inventores e desmontadores de tudo. Moram em casas redondas de madeira com portinholas de latão e oficinas cheias de engrenagens. São rápidos e frágeis, e convocam o exército com a engrenagem de guerra.
+
+![Gnomos e infernais: civis, soldados, chefes e arqueiros](imagens/novos_povos.png)
+
+*Os gnomos, de gorro pontudo, e os infernais, de chifres e olhos de brasa.*
+- **Infernais:** de pele vermelha, roxa ou azulada, chifres e olhos de brasa. Vivem em casas e salões de pedra negra com brasas acesas, e dizem que a noite não escolhe a quem abriga. Convocam o exército com o braseiro de guerra e o gongo.
+- **Humanos neutros:** você sempre é amigo dos humanos. A vila deles é zona neutra: não entra em guerra, não pode ser conquistada e nunca te ataca.
+- **Alianças:** gnomos são amigos dos elfos e gigantes dos orcs, e fechar pacto com um vale para o amigo. Goblins e infernais não têm amigos. Os anões são pacíficos e diplomáticos, donos do metal negro, e o cristal é dos elfos.
+- **Líderes de cada povo:** Rabi, o Ladrão (goblins), Son of the Tree (elfos), Dvalin Veio-Negro (anões), Zulu (orcs) e Brumgar Boca-Larga (gigantes) ficam na aldeia principal, se escondem na guerra e nunca morrem. Os infernais são só inimigos.
+
+![Os líderes: Rabi, Son of the Tree, Dvalin, Zulu e Brumgar](imagens/lideres.png)
+
+*Rabi, Son of the Tree, Dvalin Veio-Negro, Zulu e Brumgar Boca-Larga.*
 - **Sub-aldeias e aldeia principal:** a principal guarda o chefe, com soldados mais fortes e portões trancados. Para chegar lá, é preciso conquistar antes as sub-aldeias daquele povo.
 - **Pacto:** você fecha pacto em uma sub-aldeia, e ele vale para o povo inteiro, inclusive o chefe. Antes do pacto, ninguém te ataca, mas nenhuma porta de aldeia abre para você. Depois, os outros povos viram inimigos.
 - **Níveis:** as aldeias rivais ficam mais fortes com os dias. As do seu povo só vão subir com missões, que ainda serão criadas.
@@ -97,12 +110,12 @@ Cada povo guarda uma opinião sobre você, de −100 a 100. Ela aparece na aba *
 ### Vida dos NPCs
 - **Rotina:** os civis de aldeia andam e conversam de dia. Quando anoitece ou a chuva aperta, vão até a porta mais próxima e entram; saem de manhã.
 - **Reação a você:** cumprimentam quando você chega perto, com fala diferente de manhã, na chuva e conforme a reputação. Se você estiver de espada ou arco na mão, recuam e pedem para guardar.
-- **Conversas com opções:** os civis dos seis povos têm um menu de perguntas (quem é o povo, que lugar é este, novidades). A novidade muda na segunda vez que você pergunta, e eles lembram que já te conheceram.
+- **Conversas com opções:** os civis dos oito povos têm um menu de perguntas (quem é o povo, que lugar é este, novidades). A novidade muda na segunda vez que você pergunta, e eles lembram que já te conheceram.
 - **Personagens dentro das casas:** interiores podem ter gente lá dentro, com falas em balão, conversa e animação própria.
 - Personagens importantes da história podem ser marcados: eles se escondem na guerra e não morrem.
 
 ### Guerra
-- **Convocação:** cada povo chama o exército do seu jeito: **sino** (humanos), **trombeta** (orcs), **harpa** (elfos), **saco de moedas** chacoalhado (goblins), **bigorna** (anões) e **tambor** (gigantes).
+- **Convocação:** cada povo chama o exército do seu jeito: **sino** (humanos), **trombeta** (orcs), **harpa** (elfos), **saco de moedas** chacoalhado (goblins), **bigorna** (anões) e **tambor** (gigantes), **engrenagem** com sino (gnomos) e **gongo** no braseiro (infernais).
 - **Exército:** os soldados marcham em formação atrás de você, desviam de obstáculos e lutam com o inimigo. Você luta junto e pode dispensá-los quando quiser.
 - **Ponto de volta:** convocar salva o jogo. Se morrer na guerra, você volta ao lado do chamado, com tudo como estava.
 - **Clima de guerra:** ao pisar na aldeia atacada, a tela fica avermelhada, entram tambores, cinza e fumaça, e a área pisca em vermelho no chão e no minimapa.
@@ -142,6 +155,9 @@ Cada povo guarda uma opinião sobre você, de −100 a 100. Ela aparece na aba *
 - **Caverna dos anões:** a porta talhada leva à caverna onde eles vivem, com forja, bigorna, lingotes e os anões trabalhando.
 
 ### Minérios e armaduras
+- **Itens de cada minério:** espada, armadura e flechas de cobre, ferro, metal negro (o melhor, dos anões) e cristal (dos elfos). A flecha mais forte que você tiver é a que o arco usa.
+- **Craft descoberto:** cada receita só aparece depois que você pega o item ou o minério dela, e o jogo avisa "Novo craft descoberto".
+- **Amuletos de cada povo:** cada um dá habilidades do povo, como velocidade e arco forte dos elfos, mão de forja dos anões, ou fôlego e mochila maior dos gnomos.
 - **Seis minérios:** ferro, carvão, cristal, ferro negro, cobre e enxofre. As rochas de minério só quebram com picareta.
 - **Armaduras de metal:** cobre (+3 de defesa), ferro (+4) e **ferro negro (+7, a melhor)**. Cada uma pede o minério e a armadura do nível anterior.
 - **Barraca de ferro dos anões:** vende minério mais barato que as outras, carvão, ferramentas e as três armaduras.
@@ -149,7 +165,7 @@ Cada povo guarda uma opinião sobre você, de −100 a 100. Ela aparece na aba *
 ### Cultivo
 - **Arar:** com a enxada, a terra vira canteiro de verdade, e canteiros vizinhos se emendam numa plantação.
 - **Água:** só se planta a até 8 tiles de água. Terra arada longe da água seca em um minuto. Deserto e montanha são pedra e areia, não solo.
-- **Plantas:** rabanete (3 dias), nabo (4), beterraba (5), trigo (6) e maconha (7). Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
+- **Plantas:** rabanete (3 dias), nabo (4), batata (3), beterraba (5), trigo (6) e maconha (7). Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
 - **Inverno:** nada se planta, e o que estiver plantado morre de frio.
 
 ![Canteiro com rabanete, nabo, beterraba, trigo e maconha em várias fases](imagens/cultivo.png)
@@ -187,11 +203,26 @@ Mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos no campo e na fl
 
 ![Interior da padaria](imagens/padaria.png)
 
+### Dormir, acampar e ler
+- **Cama:** nas casas do povo do seu pacto (e nas humanas), a cama deixa você dormir, salvar o jogo e escolher aquela casa como lar.
+- **Fogueira de acampamento:** um craft para quando você está longe de casa. Dá para dormir nela à noite, e ao acordar ela vira cinzas.
+- **Eventos de casa:** em cada vila, uma casa tem chance de guardar uma cena: elfos pegos de surpresa na cama, um orc numa casa ensanguentada jurando que nada aconteceu, um padeiro com serragem na farinha, um goblin cheio de coisas "achadas", um anão chorando abraçado à bigorna, um gigante com ossos de cabra, um gnomo com uma máquina soltando fumaça e um infernal com um "jogo de tabuleiro" cheio de velas.
+
+![Oito cenas de casa, uma de cada povo](imagens/eventos_de_casa.png)
+
+*Uma casa de cada vila guarda uma cena.*
+- **Biblioteca:** uma construção com estantes e uma bibliotecária. Os livros são PDFs convertidos para páginas que você lê dentro do jogo.
+
+![Interior da biblioteca, com estantes e a bibliotecária](imagens/biblioteca.png)
+
+*A biblioteca por dentro.*
+- **A noite:** zumbis, esqueletos, aranhas, fantasmas e goblins de ronda com tocha saem longe das aldeias e das luzes. Os soldados de uma aldeia amiga te protegem, e os que morrem voltam no dia seguinte. Quem conheceu o eremita o vê de longe, à noite, com um olho amarelo, e ele some em fumaça quando você chega perto.
+
 ### Editor de mapa
 O jogo tem um editor completo, aberto pelo menu inicial:
 - **Clicar para editar:** clique em qualquer coisa no mapa e as opções dela aparecem ao lado.
 - **Ferramentas:** pintar terreno, mudar o relevo, colocar objetos com busca e categorias, e arrastar muros em linha reta.
-- **Áreas:** demarcar biomas e aldeias dos seis povos, com um resumo do que falta em cada aldeia.
+- **Áreas:** demarcar biomas e aldeias dos oito povos, com um resumo do que falta em cada aldeia.
 - **NPCs:** definir raio, rotas e distância de perseguição.
 - **Objetos novos na categoria Mundo:** rochas de minério, entrada de caverna, caverna dos anões e entrada de masmorra.
 - **Teste:** o F5 abre o mapa para clicar onde nascer, e o F1 abre um painel com aldeias prontas, guerra, hora, itens, cenas de morte e o presságio do corvo.
