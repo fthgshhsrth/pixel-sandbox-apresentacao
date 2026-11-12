@@ -23,7 +23,7 @@ Feito em **Godot 4.4** por uma pessoa só.
 | **Mundo** | Mapa de 1920 x 1440 tiles, cinco biomas (com a Terra de Brasa), dia e noite, chuva, vento, quatro estações e oito fases da lua |
 | **Povos** | Oito: humanos, orcs, elfos, goblins, anões, gigantes, gnomos e infernais |
 | **Guerra** | Convoque o exército de um povo, ataque aldeias, conquiste, roube ou queime |
-| **Vida** | Plantar, pescar, minerar, forjar, criar itens, acampar, dormir em casa e ler numa biblioteca |
+| **Vida** | Plantar, pescar, cozinhar, criar bichos, minerar, forjar, construir, acampar, dormir em casa e ler numa biblioteca |
 | **Cenas** | Uma cena de morte diferente para cada tipo de assassino |
 | **Editor** | O mapa inteiro é feito no editor do próprio jogo |
 
@@ -138,12 +138,15 @@ O bioma dos infernais. Não tem árvores, o céu e o chão ficam vermelhos, e em
 - **Quatro estações de 7 dias:** primavera, verão, outono e inverno, com cores, folhas, neve e sons próprios. No inverno a fome aperta, não dá para plantar e o frio machuca longe do fogo.
 - **Vento, chuva e névoa:** o vento tem direção de verdade e a seta dele aparece no selo do dia. A chuva escurece o dia e traz trovão, e a névoa da manhã sobe e some no meio da manhã.
 - **Fases da lua:** oito, em ciclos de oito dias. A lua nova deixa a noite escura e os monstros cegos. A lua cheia é a **lua de sangue**: o céu fica vermelho, os monstros ficam 50% mais fortes e aparecem o dobro.
+- **Calendário:** uma página do caderno mostra o dia, a estação, a fase da lua e quantos dias faltam para a próxima lua de sangue e a próxima lua nova.
+- **Aviso do anoitecer:** pouco antes de escurecer o jogo avisa, com um texto próprio nas noites de lua de sangue.
 
 ### A noite é perigosa
 
 Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** saem à noite. Eles não nascem perto de aldeias, de postes nem de fogueiras, e somem quando o sol nasce.
 
 - Se você correr para uma aldeia amiga, os soldados te protegem. Os que morrerem na luta voltam no dia seguinte.
+- **Luz e fogo espantam:** tochas de mão, tochas de chão e fogueiras fazem os monstros fugirem. A chuva apaga as tochas ao ar livre, sem gastar o combustível, e elas voltam a acender quando a chuva passa.
 
 ---
 
@@ -221,13 +224,32 @@ Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** 
 - **Arar:** com a enxada, a terra vira canteiro, e canteiros vizinhos se emendam numa plantação. Só se planta a até 8 tiles de água.
 - **Plantas:** rabanete, nabo, batata, beterraba, trigo e maconha, cada uma com seu tempo e sua forma. Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
 - **Plantas do inverno:** mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos só no inverno e brilham no escuro.
-- **Pesca:** lance a linha, espere o peixe morder e puxe no tempo certo.
+- **Pesca:** lance a linha, espere o peixe morder e puxe no tempo certo. O peixe vai para a mochila e estraga logo, então convém assá-lo.
 - **Fogueira de acampamento:** um craft para quando você está longe de casa. Dá para dormir nela à noite, e ao acordar ela vira cinzas.
 - **Fome e frio:** a fome baixa com o tempo, e o frio aparece no inverno, nas noites de outono e na montanha.
 
 <p align="center">
   <img src="imagens/plantas_inverno.png" alt="Plantas que brilham no inverno" width="60%">
 </p>
+
+---
+
+## Construção, cozinha e bichos
+
+<p align="center">
+  <img src="imagens/construcao_e_cozinha.png" alt="Menu de construção do martelo, uma fogueira com espeto e um forno" width="90%"><br>
+  <sub>O menu do martelo à esquerda, com o que cada construção custa. No meio, uma fogueira com um espeto. À direita, um forno.</sub>
+</p>
+
+- **Martelo:** segurando-o, aparece a lista das construções que você já aprendeu e o que cada uma custa, em verde o que você tem e em vermelho o que falta. A tecla R troca a escolhida e o clique no chão constrói, gastando os materiais da mochila. Dá para fazer muro de pedra, cerca, portão, cabana, casa, tocha de chão, composteira, estufa, espeto, varal e forno. Quebrar com o machado ou a picareta devolve o kit.
+- **Estufa:** de vidro, protege do inverno o que cresce lá dentro. O telhado e a parede da frente quase somem quando você entra, para você enxergar as plantas.
+- **Composteira:** comida podre vira fertilizante. Um sinal aparece nela quando há fertilizante para pegar.
+- **Baldes e fertilizante:** dá para regar a terra com baldes d'água e adubar com o fertilizante.
+- **Tochas:** a de mão queima carvão, ilumina o redor e aparece na mão do personagem. A de chão fica onde você a coloca. As duas crepitam. O minimapa marca as estufas, tochas de chão e composteiras que você construiu.
+- **Cozinha:** o **espeto** assa batata e o **varal** assa peixe, os dois perto de uma fogueira de acampamento acesa. O **forno** assa os dois sem fogueira e gasta carvão. Você segura o ingrediente, aperta E, espera e recolhe a comida assada. O tempo corre mesmo enquanto você dorme.
+- **Comer rápido:** a tecla C come o primeiro alimento da hotbar quando você está com fome.
+- **Bichos:** galinhas e vacas selvagens podem ser domadas com comida (sementes e milho para as galinhas, trigo para as vacas). Elas dão ovos e leite no dia seguinte, se reproduzem e vão embora se passarem fome. Um sinal sobre o bicho mostra se ele tem produto para pegar ou está com fome.
+- **Missões:** o caderno tem uma página de missões e o jogo mostra a ativa no canto da tela. O sistema está pronto, e as missões de cada povo ainda serão escritas.
 
 ---
 
@@ -251,7 +273,7 @@ Elfos pegos de surpresa na cama, um orc numa casa ensanguentada jurando que nada
 
 ## Interface e controles
 
-Uma interface de RPG clássico, em molduras de couro e ouro. No canto superior esquerdo ficam o retrato e as barras de vida, fôlego, fome e frio. No canto superior direito, o selo do dia, com a fase da lua, a estação e a seta do vento, e o minimapa redondo logo abaixo. Embaixo, a hotbar de cinco espaços.
+Uma interface de RPG clássico, em molduras de couro e ouro. No canto superior esquerdo ficam o retrato e as barras de vida, fôlego, fome e frio. No canto superior direito, o selo do dia, com a fase da lua, a estação e a seta do vento, e o minimapa redondo logo abaixo. Embaixo, a hotbar de cinco espaços, com uma barrinha de desgaste nas ferramentas, de combustível nas tochas e de água nos baldes. As barras mostram os números e têm uma faixa que fica um instante quando você perde vida. A vida baixa faz a moldura e o retrato pulsarem em vermelho.
 
 | Tecla | Ação |
 |---|---|
@@ -261,7 +283,9 @@ Uma interface de RPG clássico, em molduras de couro e ouro. No canto superior e
 | E | Conversar, entrar, pegar, usar, comprar |
 | Tab ou I | Inventário e criar itens |
 | 1 a 5 | Hotbar |
-| J | Caderno: anotações, bestiário, suas notas e povos |
+| J | Caderno: anotações, bestiário, suas notas, povos, missões e calendário |
+| R | Trocar a construção escolhida (com o martelo na mão) |
+| C | Comer o primeiro alimento da hotbar |
 | Z e X, ou botão do meio arrastando | Girar a câmera |
 | Roda do mouse | Aproximar ou afastar |
 | Esc | Pausa, salvar, configurações |
@@ -288,7 +312,7 @@ A história ainda está sendo escrita, e o jogo já tem uma abertura, um despert
 
 ### Próximos passos
 
-- Missões e a história principal, a começar pelos líderes de cada povo.
+- Escrever as missões e a história principal, a começar pelos líderes de cada povo. O sistema de missões já funciona.
 - Colocar as aldeias, as cavernas, as masmorras e os minérios no mapa.
 - Armadilhas e variedade nas masmorras.
 - Definir a parte online: a ideia é um MMORPG com história, mas ainda não há rede nem servidor.
