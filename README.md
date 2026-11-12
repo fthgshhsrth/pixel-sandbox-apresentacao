@@ -33,12 +33,12 @@ Feito em **Godot 4.4** por uma pessoa só.
 
 <table>
   <tr>
-    <td width="50%"><img src="imagens/lua_sangue.png" alt="Noite de lua de sangue"><br><sub>Lua de sangue: o céu fica vermelho e os monstros, mais fortes. Ao fundo, o eremita com o olho amarelo.</sub></td>
+    <td width="50%"><img src="imagens/lua_sangue.png" alt="Noite de lua de sangue"><br><sub>Lua de sangue: o céu fica vermelho e os monstros, mais fortes.</sub></td>
     <td width="50%"><img src="imagens/inverno.png" alt="Campo no inverno"><br><sub>Inverno: neve, árvores peladas e frio que machuca.</sub></td>
   </tr>
   <tr>
     <td><img src="imagens/fogo.png" alt="Casas queimando"><br><sub>Conquistou a aldeia? Dá para roubar ou queimar cada casa.</sub></td>
-    <td><img src="imagens/padaria.png" alt="Interior da padaria"><br><sub>Por dentro da padaria, onde a história começa.</sub></td>
+    <td><img src="imagens/padaria.png" alt="Interior da padaria"><br><sub>Por dentro da padaria.</sub></td>
   </tr>
   <tr>
     <td><img src="imagens/biblioteca.png" alt="Interior da biblioteca"><br><sub>A biblioteca, onde livros em PDF viram páginas dentro do jogo.</sub></td>
@@ -60,7 +60,7 @@ Cada povo tem homens e mulheres, civis, soldados, um chefe, falas, construções
 | Povo | Como é | Convoca com |
 |---|---|---|
 | **Humanos** | A média de todos. Sempre amigos seus, e a vila deles é zona neutra: não entra em guerra, não pode ser conquistada e nunca te ataca | Sino |
-| **Orcs** | Fortes e muito burros, de vista curta. Dizem descender de Ranvigor, mas a verdade é outra e eles não sabem | Trombeta |
+| **Orcs** | Fortes e muito burros, de vista curta | Trombeta |
 | **Elfos** | Sinceros e leais. Donos do cristal | Harpa |
 | **Goblins** | O povo mais rico, covarde e manipulador | Saco de moedas |
 | **Anões** | Pacíficos, diplomáticos e inteligentes. Donos do metal negro, o melhor material do jogo. Vivem em cavernas | Bigorna de guerra |
@@ -78,12 +78,6 @@ Cada povo tem na aldeia principal um líder que vai passar as missões. Todos se
   <img src="imagens/lideres.png" alt="Os líderes de cada povo" width="70%"><br>
   <sub>Rabi, o Ladrão; Son of the Tree; Dvalin Veio-Negro; Zulu; Brumgar Boca-Larga.</sub>
 </p>
-
-- **Rabi, o Ladrão** (goblins) vai te manipular o jogo todo.
-- **Son of the Tree** (elfos) é sincero e leal.
-- **Dvalin Veio-Negro** (anões) usa você e, no fim, manda fechar pacto com os elfos.
-- **Zulu** (orcs) pede coisas burras e simples, e obedecer a ele pode custar caro.
-- **Brumgar Boca-Larga** (gigantes) te despreza.
 
 Os infernais são só inimigos, sem líder.
 
@@ -129,7 +123,6 @@ Com **40 ou mais**, as barracas vendem 20% mais barato e os civis te recebem bem
 Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** saem à noite. Eles não nascem perto de aldeias, de postes nem de fogueiras, e somem quando o sol nasce.
 
 - Se você correr para uma aldeia amiga, os soldados te protegem. Os que morrerem na luta voltam no dia seguinte.
-- Quem conheceu o eremita o vê de longe, à noite, com um olho amarelo brilhando. Ao chegar perto, ele some em fumaça.
 
 ---
 
@@ -260,27 +253,7 @@ O mapa inteiro é desenhado à mão no editor do próprio jogo, aberto pelo menu
 
 ## A história
 
-### O que já está no jogo
-
-**A abertura.** No universo vazio, uma deusa branca aparece e cria a Terra. O Sol vaga ao fundo, ela o alcança e põe a Terra em órbita. Do fundo do vazio, um ser escuro e menor a observa.
-
-**O despertar.** Na escuridão, uma voz suave chama: *"Oii... Olá? Tá tudo bem? Você morreu? Acorda..."* Seus olhos abrem devagar, você vê o céu e uma mulher em silhueta contra o sol: *"Ah, você tá vivo... Quem é você?"*
-
-**A Letícia e a padaria.** Ao acordar, a Letícia está ao seu lado. Ela te convida para a aldeia e vai andando com você até a padaria onde trabalha. Lá dentro, um eremita de um olho só está sentado sozinho num canto; Seu João e Shileno trocam murros discutindo o gosto do Seu João por mecânica; e numa mesa bebem dois orcs, um goblin e um anão, todos exilados dos seus povos por causa da bebida.
-
-**O eremita.** Ele fala dos que foram enterrados de mau jeito e se levantam quando o sol se esconde, e avisa para estar sob um teto, perto do fogo, quando a luz for embora. Pede que você não toque nos corvos. Depois sai da padaria e some. A Letícia vem do balcão e pergunta com quem você estava falando. Ela não viu velho nenhum.
-
-### A origem dos povos
-
-A base da história é a cosmogonia de **Dharavé**. Antes de tudo havia Ekaíon, a Unidade, que se partiu em Ritavard, a ordem, e Khavoros, o caos. Dharavé foi um dos mundos que eles disputaram, e os deuses que desceram ficaram presos nos sete céus de Saptavé. Os que ficaram na matéria foram perdendo o poder até virar os **Ancestrais**, de quem descendem as raças mortais: humanos, elfos, anões, orcs, pequeninos, gnomos, goblins, draconatos, gigantes e infernais. Os que escaparam para o último céu viraram os Deuses da Sétima Morada. Ninguém sabe ao certo por que isso aconteceu.
-
-### O que está planejado
-
-O conflito central opõe duas grandes civilizações, e nenhuma delas é boa ou má: a **Ordem da Aliança**, de um Deus único e de lei sagrada, e a **Confederação do Sopro**, dos povos que veem espírito em tudo. Também haverá povos independentes, como os Povos do Rio Ancestral, os Reinos das Máscaras e os Guardiões das Montanhas.
-
-A pergunta que guia a história é:
-
-> **É possível construir uma ordem universal sem destruir a pluralidade dos povos, ou preservar essa pluralidade exige aceitar um mundo permanentemente dividido?**
+A história ainda está sendo escrita, e o jogo já tem uma abertura, um despertar e os primeiros personagens. Para não estragar a surpresa, ela fica de fora desta página.
 
 ### Próximos passos
 
