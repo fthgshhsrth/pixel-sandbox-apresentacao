@@ -246,7 +246,13 @@ Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** 
 - **Composteira:** comida podre vira fertilizante. Um sinal aparece nela quando há fertilizante para pegar.
 - **Baldes e fertilizante:** dá para regar a terra com baldes d'água e adubar com o fertilizante.
 - **Tochas:** a de mão queima carvão, ilumina o redor e aparece na mão do personagem. A de chão fica onde você a coloca. As duas crepitam. O minimapa marca as estufas, tochas de chão e composteiras que você construiu.
-- **Cozinha:** o **espeto** assa batata e o **varal** assa peixe, os dois perto de uma fogueira de acampamento acesa. O **forno** assa os dois sem fogueira e gasta carvão. Você segura o ingrediente, aperta E, espera e recolhe a comida assada. O tempo corre mesmo enquanto você dorme.
+- **Cozinha:** o **varal** se encaixa em cima de uma fogueira de acampamento e assa 2 peixes por vez. O **espeto** fica junto da fogueira e assa batata. O **forno de barro** assa os dois sem fogueira, até 6 de uma vez, e gasta carvão. Você segura o ingrediente, aperta E, espera e recolhe a comida assada. O tempo corre mesmo enquanto você dorme.
+- **Assando de verdade:** a comida aparece pendurada ou espetada na estação e vai dourando aos poucos. Enquanto assa sobe fumaça, chia e saltam faíscas da gordura no fogo. Quando fica pronta, sai um vapor branco e um sinal mostra que dá para pegar.
+
+<p align="center">
+  <img src="imagens/cozinha.png" alt="Peixes num varal sobre a fogueira e batatas no espeto, soltando fumaça" width="80%"><br>
+  <sub>Peixes no varal em cima da fogueira, à esquerda, e batatas no espeto, à direita.</sub>
+</p>
 - **Comer rápido:** a tecla C come o primeiro alimento da hotbar quando você está com fome.
 - **Bichos:** galinhas e vacas selvagens podem ser domadas com comida (sementes e milho para as galinhas, trigo para as vacas). Elas dão ovos e leite no dia seguinte, se reproduzem e vão embora se passarem fome. Um sinal sobre o bicho mostra se ele tem produto para pegar ou está com fome.
 - **Missões:** o caderno tem uma página de missões e o jogo mostra a ativa no canto da tela. O sistema está pronto, e as missões de cada povo ainda serão escritas.
