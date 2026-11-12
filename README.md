@@ -20,10 +20,10 @@ Feito em **Godot 4.4** por uma pessoa só.
 | | |
 |---|---|
 | **Visual** | Personagens 2D desenhados em pixel art, num mundo 3D com luz, sombra e câmera que gira de 90 em 90 graus |
-| **Mundo** | Mapa de 1920 x 1440 tiles, quatro biomas, dia e noite, chuva, vento, quatro estações e oito fases da lua |
+| **Mundo** | Mapa de 1920 x 1440 tiles, cinco biomas (com a Terra de Brasa), dia e noite, chuva, vento, quatro estações e oito fases da lua |
 | **Povos** | Oito: humanos, orcs, elfos, goblins, anões, gigantes, gnomos e infernais |
 | **Guerra** | Convoque o exército de um povo, ataque aldeias, conquiste, roube ou queime |
-| **Vida** | Plantar, pescar, minerar, criar itens, acampar, dormir em casa e ler numa biblioteca |
+| **Vida** | Plantar, pescar, minerar, forjar, criar itens, acampar, dormir em casa e ler numa biblioteca |
 | **Cenas** | Uma cena de morte diferente para cada tipo de assassino |
 | **Editor** | O mapa inteiro é feito no editor do próprio jogo |
 
@@ -111,6 +111,27 @@ Com **40 ou mais**, as barracas vendem 20% mais barato e os civis te recebem bem
 
 ---
 
+## A Terra de Brasa
+
+O bioma dos infernais. Não tem árvores, o céu e o chão ficam vermelhos, e em vez de chuva caem brasas.
+
+<p align="center">
+  <img src="imagens/terra_de_brasa.png" alt="Chuva de fogo na Terra de Brasa" width="85%"><br>
+  <sub>Chuva de fogo, chão em brasa e infernais errantes ao longe.</sub>
+</p>
+
+- **O chão queima:** andar nela sem proteção faz você perder vida em ondas cada vez mais fortes, até morrer. Protegem as **Botas de Brasa** e o amuleto dos infernais.
+- **Mini vulcões:** quebrados com picareta de pedra ou melhor, soltam **enxofre** e voltam em alguns dias.
+- **Vulcão grande:** nas noites de lua de sangue entra em erupção, com explosões de lava e uma chuva de fogo ainda mais forte.
+- **Infernais errantes:** nascem ali, nunca saem do bioma e atacam outros bichos, que por isso nem chegam perto.
+- **No minimapa:** a área aparece em vermelho, e a montanha em azul acinzentado.
+
+<p align="center">
+  <img src="imagens/vulcao.png" alt="Vulcão em erupção" width="85%">
+</p>
+
+---
+
 ## Tempo, clima e noite
 
 - **Dia e noite:** um dia dura 35 minutos reais.
@@ -166,8 +187,17 @@ Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** 
 
 - **Seis minérios:** ferro, carvão, cristal, metal negro, cobre e enxofre. As rochas só quebram com picareta.
 - **Itens de cada minério:** espada, armadura e flechas de **cobre**, **ferro**, **metal negro** (o melhor, dos anões) e **cristal** (dos elfos). A flecha mais forte que você tiver é a que o arco usa.
-- **Craft descoberto:** cada receita só aparece depois que você pega o item ou o minério dela, e o jogo avisa "Novo craft descoberto".
+- **Craft descoberto:** cada receita fica como "???" até você pegar um dos ingredientes. Antes disso só dá para ver o tipo do que ela pede, e o jogo avisa quando uma receita é descoberta.
+- **Hierarquia de mineração:** a picareta improvisada quebra só pedra, a de pedra quebra ferro, carvão, cobre e enxofre, a de ferro quebra metal negro e só a de metal negro quebra cristal. O carvão derrete o ferro em **barras**, que viram as ferramentas e armas de ferro.
+- **Forja dos anões:** os itens de metal só se forjam dentro das cavernas dos anões, na forja ou na bigorna, e cada peça gasta carvão que você mesmo traz. Os anões deixam claro que não são seus escravos para fornecer material.
+- **Ferramentas gastam:** picaretas, machados, espadas, arco e enxada têm um número de usos e quebram quando acabam. Os usos restantes aparecem ao lado do nome.
+- **Comida estraga:** cada comida tem um prazo, de 3 dias (mirtilo) a 12 (batata), e some quando vence.
 - **Amuletos de cada povo:** um para cada povo, com habilidades dele. Velocidade e arco forte dos elfos, mão de forja e imunidade ao frio dos anões, mochila maior dos gnomos, vida a mais dos gigantes.
+
+<p align="center">
+  <img src="imagens/craft_guia.png" alt="Menu de criar, com receitas ainda não descobertas" width="70%"><br>
+  <sub>Receitas ainda não descobertas aparecem como ???.</sub>
+</p>
 
 <p align="center">
   <img src="imagens/itens.png" alt="Espadas, armadura, flechas, batata, amuletos e fogueira" width="60%"><br>
@@ -203,7 +233,8 @@ Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** 
 
 ## Casas, eventos e biblioteca
 
-- **Interiores 3D:** casas, ocas, salões, uma padaria e uma biblioteca, cada um por dentro, com gente que conversa e se mexe. O sobrado e a torre élfica têm segundo andar.
+- **Interiores 3D:** casas, ocas, salões, uma padaria e uma biblioteca, cada um por dentro, com poeira no ar e a chuva abafada lá fora. O sobrado e a torre élfica têm segundo andar.
+- **Moradores:** as casas das aldeias têm um ou dois moradores do povo, sentados de dia e em pé à noite, que conversam e comentam a vida.
 - **Cama:** nas casas do povo do seu pacto, a cama deixa você dormir, salvar o jogo e escolher aquela casa como lar.
 - **Eventos de casa:** em cada vila, uma casa tem chance de guardar uma cena.
 
