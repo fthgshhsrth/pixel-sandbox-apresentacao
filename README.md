@@ -1,20 +1,239 @@
 # Pixel Sandbox
 
-RPG de mundo aberto em pixel art, com personagens em 2D dentro de um mundo em 3D (estilo HD-2D), feito em **Godot 4.4**. O clima é de era medieval sombria: você explora, escolhe um povo, leva exércitos para a guerra e conquista ou destrói aldeias.
+**Um RPG de mundo aberto em pixel art, com personagens em 2D dentro de um mundo em 3D.**
+Era medieval sombria, oito povos em guerra e em paz, noites que ficam perigosas e uma história que ainda está sendo escrita.
+
+Feito em **Godot 4.4** por uma pessoa só.
 
 > **Aviso:** o jogo tem violência explícita, com desmembramento e cenas de morte com muito sangue.
+>
+> **Estado:** em desenvolvimento. O mapa e as aldeias são desenhados à mão no editor do próprio jogo. Esta página é só uma apresentação: o jogo ainda não está disponível para baixar, e o código não está aqui.
 
-> **Estado:** em desenvolvimento. O mapa e as aldeias são desenhados à mão no editor do próprio jogo, e a história ainda está sendo escrita. Esta página é só uma apresentação: o jogo ainda não está disponível para baixar, e o código não está aqui. O que já funciona está separado do que ainda é plano.
+<p align="center">
+  <img src="imagens/batalha.png" alt="Batalha numa aldeia" width="90%">
+</p>
 
-![Batalha numa aldeia](imagens/batalha.png)
+---
 
-## Controles
+## Em poucas linhas
+
+| | |
+|---|---|
+| **Visual** | Personagens 2D desenhados em pixel art, num mundo 3D com luz, sombra e câmera que gira de 90 em 90 graus |
+| **Mundo** | Mapa de 1920 x 1440 tiles, quatro biomas, dia e noite, chuva, vento, quatro estações e oito fases da lua |
+| **Povos** | Oito: humanos, orcs, elfos, goblins, anões, gigantes, gnomos e infernais |
+| **Guerra** | Convoque o exército de um povo, ataque aldeias, conquiste, roube ou queime |
+| **Vida** | Plantar, pescar, minerar, criar itens, acampar, dormir em casa e ler numa biblioteca |
+| **Cenas** | Uma cena de morte diferente para cada tipo de assassino |
+| **Editor** | O mapa inteiro é feito no editor do próprio jogo |
+
+---
+
+## Galeria
+
+<table>
+  <tr>
+    <td width="50%"><img src="imagens/lua_sangue.png" alt="Noite de lua de sangue"><br><sub>Lua de sangue: o céu fica vermelho e os monstros, mais fortes. Ao fundo, o eremita com o olho amarelo.</sub></td>
+    <td width="50%"><img src="imagens/inverno.png" alt="Campo no inverno"><br><sub>Inverno: neve, árvores peladas e frio que machuca.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="imagens/fogo.png" alt="Casas queimando"><br><sub>Conquistou a aldeia? Dá para roubar ou queimar cada casa.</sub></td>
+    <td><img src="imagens/padaria.png" alt="Interior da padaria"><br><sub>Por dentro da padaria, onde a história começa.</sub></td>
+  </tr>
+  <tr>
+    <td><img src="imagens/biblioteca.png" alt="Interior da biblioteca"><br><sub>A biblioteca, onde livros em PDF viram páginas dentro do jogo.</sub></td>
+    <td><img src="imagens/editor.png" alt="Editor de mapa"><br><sub>O editor de mapa.</sub></td>
+  </tr>
+</table>
+
+---
+
+## Os oito povos
+
+Cada povo tem homens e mulheres, civis, soldados, um chefe, falas, construções e um jeito próprio de convocar o exército.
+
+<p align="center">
+  <img src="imagens/novos_povos.png" alt="Gnomos e infernais" width="80%"><br>
+  <sub>Os gnomos, de gorro pontudo, e os infernais, de chifres e olhos de brasa.</sub>
+</p>
+
+| Povo | Como é | Convoca com |
+|---|---|---|
+| **Humanos** | A média de todos. Sempre amigos seus, e a vila deles é zona neutra: não entra em guerra, não pode ser conquistada e nunca te ataca | Sino |
+| **Orcs** | Fortes e muito burros, de vista curta. Dizem descender de Ranvigor, mas a verdade é outra e eles não sabem | Trombeta |
+| **Elfos** | Sinceros e leais. Donos do cristal | Harpa |
+| **Goblins** | O povo mais rico, covarde e manipulador | Saco de moedas |
+| **Anões** | Pacíficos, diplomáticos e inteligentes. Donos do metal negro, o melhor material do jogo. Vivem em cavernas | Bigorna de guerra |
+| **Gigantes** | Fortes e inteligentes, mas comilões e sempre com fome. Têm o dobro da altura de um humano | Tambor de guerra |
+| **Gnomos** | Frágeis, inteligentes e inofensivos. Inventores e desmontadores de tudo | Engrenagem de guerra |
+| **Infernais** | De chifres e olhos de brasa, inimigos de todos | Braseiro e gongo |
+
+**Alianças:** os gnomos são amigos dos elfos, e os gigantes, dos orcs. Fechar pacto com um povo vale para o amigo dele. Goblins e infernais não têm amigos.
+
+### Os líderes
+
+Cada povo tem na aldeia principal um líder que vai passar as missões. Todos se escondem na guerra e nunca morrem.
+
+<p align="center">
+  <img src="imagens/lideres.png" alt="Os líderes de cada povo" width="70%"><br>
+  <sub>Rabi, o Ladrão; Son of the Tree; Dvalin Veio-Negro; Zulu; Brumgar Boca-Larga.</sub>
+</p>
+
+- **Rabi, o Ladrão** (goblins) vai te manipular o jogo todo.
+- **Son of the Tree** (elfos) é sincero e leal.
+- **Dvalin Veio-Negro** (anões) usa você e, no fim, manda fechar pacto com os elfos.
+- **Zulu** (orcs) pede coisas burras e simples, e obedecer a ele pode custar caro.
+- **Brumgar Boca-Larga** (gigantes) te despreza.
+
+Os infernais são só inimigos, sem líder.
+
+### Reputação
+
+Cada povo guarda uma opinião sobre você, de −100 a 100, na aba **Povos** do caderno.
+
+| O que você faz | Efeito |
+|---|---|
+| Conversar com um civil (primeira vez no dia) | +2 |
+| Comprar numa barraca | +1 |
+| Fechar pacto | +60 |
+| Matar um soldado | −4 |
+| Matar um civil | −10 |
+| Roubar ou queimar uma casa | −10 ou −20 |
+| Conquistar uma aldeia | −30 |
+
+Com **40 ou mais**, as barracas vendem 20% mais barato e os civis te recebem bem. Com **−40 ou menos**, ninguém vende nem conversa. A reputação com um povo também sobe pela metade no amigo dele.
+
+---
+
+## Guerra
+
+- **Convocar:** cada povo chama o exército do seu jeito. Os soldados marcham em formação atrás de você, desviam de obstáculos e lutam ao seu lado.
+- **Ponto de volta:** convocar salva o jogo. Se morrer na guerra, você volta ao lado do chamado.
+- **Clima de guerra:** ao pisar na aldeia atacada, a tela fica avermelhada, entram tambores, cinza e fumaça.
+- **Defesas:** torres de vigia dão o alarme, torres de arqueiros atiram flechas que dá para desviar, e os portões abrem para os soldados saírem e se fecham atrás deles.
+- **Conquista:** quando os soldados acabam, a aldeia é sua. Os civis saem das casas, tristes e com medo, e você escolhe entre roubar e queimar.
+- **Aldeia principal:** guarda o chefe, com soldados mais fortes e portões trancados. Só se chega lá conquistando antes as sub-aldeias do povo.
+- **Pacto:** feito numa sub-aldeia, vale para o povo inteiro. Antes do pacto, ninguém te ataca, mas nenhuma porta de aldeia abre para você. Depois, os outros povos viram inimigos.
+
+---
+
+## Tempo, clima e noite
+
+- **Dia e noite:** um dia dura 35 minutos reais.
+- **Quatro estações de 7 dias:** primavera, verão, outono e inverno, com cores, folhas, neve e sons próprios. No inverno a fome aperta, não dá para plantar e o frio machuca longe do fogo.
+- **Vento, chuva e névoa:** o vento tem direção de verdade e a seta dele aparece no selo do dia. A chuva escurece o dia e traz trovão, e a névoa da manhã sobe e some no meio da manhã.
+- **Fases da lua:** oito, em ciclos de oito dias. A lua nova deixa a noite escura e os monstros cegos. A lua cheia é a **lua de sangue**: o céu fica vermelho, os monstros ficam 50% mais fortes e aparecem o dobro.
+
+### A noite é perigosa
+
+Zumbis, esqueletos, **aranhas**, **fantasmas** e **goblins de ronda com tocha** saem à noite. Eles não nascem perto de aldeias, de postes nem de fogueiras, e somem quando o sol nasce.
+
+- Se você correr para uma aldeia amiga, os soldados te protegem. Os que morrerem na luta voltam no dia seguinte.
+- Quem conheceu o eremita o vê de longe, à noite, com um olho amarelo brilhando. Ao chegar perto, ele some em fumaça.
+
+---
+
+## Combate e criaturas
+
+- Combate em tempo real, com golpes, atordoamento e barras de vida.
+- **Armas na mão:** espada, machado, picareta, enxada, vara de pesca e arco aparecem segurados, andando e correndo.
+- **Bichos:** esqueleto, zumbi, lobo, aranha, fantasma, vaca, galinha, veado, corvo e sapo, cada um com seus sons e seu jeito de agir.
+- **Gore:** desmembramento conforme a vida cai, sangue vermelho, sangue verde nos zumbis, poeira nos esqueletos e pedaços pelo chão.
+- **O corvo:** matar o primeiro corvo do jogo dispara um presságio: o herói de costas, relâmpagos no horizonte e um trovão. Só acontece uma vez.
+- **Masmorras e cavernas:** a masmorra tem três salas ligadas por escada, com esqueletos e zumbis, e um baú no fim. A caverna dos anões tem forja, bigorna e lingotes.
+
+### Uma cena de morte para cada assassino
+
+| Quem mata | Como |
+|---|---|
+| Esqueleto | Arranca seus órgãos, com risada sádica |
+| Zumbi | Te come |
+| Lobo | Te dilacera e uiva |
+| Humano | Uma espadada só |
+| Orc | Clava na cabeça |
+| Goblins | Vários te furando sem parar |
+| Elfo | Flechas, estocada e corte na garganta |
+| Anão | Uma picaretada que atravessa a barriga |
+| Gigante | Te ergue e te rasga em dois |
+| Gnomo | Te enlouquece, até você cair rindo |
+| Infernal | Uma bola de fogo que te queima vivo |
+
+<p align="center">
+  <img src="imagens/morte_elfo.png" alt="Cena de morte do elfo" width="70%">
+</p>
+
+---
+
+## Minérios, itens e criação
+
+<p align="center">
+  <img src="imagens/construcoes.png" alt="Construções dos gnomos e dos infernais" width="90%"><br>
+  <sub>Casas e oficinas dos gnomos, casas e salões dos infernais.</sub>
+</p>
+
+- **Seis minérios:** ferro, carvão, cristal, metal negro, cobre e enxofre. As rochas só quebram com picareta.
+- **Itens de cada minério:** espada, armadura e flechas de **cobre**, **ferro**, **metal negro** (o melhor, dos anões) e **cristal** (dos elfos). A flecha mais forte que você tiver é a que o arco usa.
+- **Craft descoberto:** cada receita só aparece depois que você pega o item ou o minério dela, e o jogo avisa "Novo craft descoberto".
+- **Amuletos de cada povo:** um para cada povo, com habilidades dele. Velocidade e arco forte dos elfos, mão de forja e imunidade ao frio dos anões, mochila maior dos gnomos, vida a mais dos gigantes.
+
+<p align="center">
+  <img src="imagens/itens.png" alt="Espadas, armadura, flechas, batata, amuletos e fogueira" width="60%"><br>
+  <sub>Parte dos itens novos: espadas, armadura de cristal, flechas, batata, os oito amuletos e a fogueira.</sub>
+</p>
+
+- **Do chão:** galhos e pedras mudam de lugar a cada dia, e dão ferramentas improvisadas.
+- **Na mão:** a ferramenta aparece segurada. O machado derruba árvores mais rápido, a picareta quebra rochas mais rápido e a espada aumenta o dano.
+
+---
+
+## Cultivo, pesca e acampamento
+
+<table>
+  <tr>
+    <td width="50%"><img src="imagens/cultivo.png" alt="Plantas em várias fases"><br><sub>Cada linha uma planta, da semente até a colheita.</sub></td>
+    <td width="50%"><img src="imagens/pesca.png" alt="Pesca"><br><sub>O peixe saindo da água.</sub></td>
+  </tr>
+</table>
+
+- **Arar:** com a enxada, a terra vira canteiro, e canteiros vizinhos se emendam numa plantação. Só se planta a até 8 tiles de água.
+- **Plantas:** rabanete, nabo, batata, beterraba, trigo e maconha, cada uma com seu tempo e sua forma. Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
+- **Plantas do inverno:** mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos só no inverno e brilham no escuro.
+- **Pesca:** lance a linha, espere o peixe morder e puxe no tempo certo.
+- **Fogueira de acampamento:** um craft para quando você está longe de casa. Dá para dormir nela à noite, e ao acordar ela vira cinzas.
+- **Fome e frio:** a fome baixa com o tempo, e o frio aparece no inverno, nas noites de outono e na montanha.
+
+<p align="center">
+  <img src="imagens/plantas_inverno.png" alt="Plantas que brilham no inverno" width="60%">
+</p>
+
+---
+
+## Casas, eventos e biblioteca
+
+- **Interiores 3D:** casas, ocas, salões, uma padaria e uma biblioteca, cada um por dentro, com gente que conversa e se mexe. O sobrado e a torre élfica têm segundo andar.
+- **Cama:** nas casas do povo do seu pacto, a cama deixa você dormir, salvar o jogo e escolher aquela casa como lar.
+- **Eventos de casa:** em cada vila, uma casa tem chance de guardar uma cena.
+
+<p align="center">
+  <img src="imagens/eventos_de_casa.png" alt="Oito cenas de casa, uma de cada povo" width="90%">
+</p>
+
+Elfos pegos de surpresa na cama, um orc numa casa ensanguentada jurando que nada aconteceu, um padeiro com serragem na farinha, um goblin cheio de coisas "achadas", um anão chorando abraçado à bigorna, um gigante com ossos de cabra, um gnomo com uma máquina soltando fumaça e um infernal com um "jogo de tabuleiro" cheio de velas.
+
+- **Biblioteca:** uma construção com estantes e uma bibliotecária. Os livros são PDFs convertidos para páginas que você lê dentro do jogo.
+- **Escritos fragmentados:** livros e pergaminhos espalhados pelo mundo que você junta aos poucos no caderno.
+
+---
+
+## Interface e controles
+
+Uma interface de RPG clássico, em molduras de couro e ouro. No canto superior esquerdo ficam o retrato e as barras de vida, fôlego, fome e frio. No canto superior direito, o selo do dia, com a fase da lua, a estação e a seta do vento, e o minimapa redondo logo abaixo. Embaixo, a hotbar de cinco espaços.
 
 | Tecla | Ação |
 |---|---|
 | WASD ou setas | Andar |
 | Shift | Correr (gasta fôlego) |
-| Clique ou F | Bater, usar a ferramenta ou o item da mão; dentro de masmorra, atacar |
+| Clique ou F | Bater, usar a ferramenta ou o item da mão |
 | E | Conversar, entrar, pegar, usar, comprar |
 | Tab ou I | Inventário e criar itens |
 | 1 a 5 | Hotbar |
@@ -23,257 +242,57 @@ RPG de mundo aberto em pixel art, com personagens em 2D dentro de um mundo em 3D
 | Roda do mouse | Aproximar ou afastar |
 | Esc | Pausa, salvar, configurações |
 
-### Interface
-Uma interface de RPG clássico, em molduras de couro e ouro:
-- **Canto superior esquerdo:** o retrato do personagem com as barras de **PV** (com o número, e a barra acende quando a vida está baixa), **FÔL** (fôlego, que escurece quando você se esgota), **FOM** (fome) e **FRI** (frio, só aparece quando você está com frio). Embaixo, o botão do caderno, que mostra quantos escritos novos você ainda não leu.
-- **Canto superior direito:** o selo do dia, com o dia em algarismos romanos, a estação e a **fase da lua**, e ao lado o minimapa redondo. Embaixo do minimapa ficam a seta do vento e o nome do bioma.
-- **Embaixo:** a hotbar de cinco espaços numerados, com o nome do item que você escolheu.
+**Dificuldades:** *Relaxante* (ninguém briga, só você, e não tem fome), *Normal* e *Difícil* (ao morrer, seus itens ficam no chão por 3 dias, a fome é mais rápida e as aldeias rivais sobem de nível mais rápido).
 
-## O que já existe no jogo
+---
 
-### Mundo
-- Mapa fixo de **1920 x 1440 tiles**, com terreno 3D, relevo, água, estradas e árvores que balançam com o vento.
-- Biomas de campo, floresta, deserto e montanha, cada um com seus sons e aviso ao entrar.
-- Ciclo de dia e noite: um dia dura 35 minutos reais, com sol, sombras e luzes noturnas.
-- Câmera que gira de 90 em 90 graus para ver tudo por todos os lados, com minimapa e névoa de exploração.
+## O editor de mapa
 
-### Clima e estações
-- **Vento:** tem direção de verdade e muda aos poucos. A seta num selo abaixo do minimapa mostra para onde ele sopra, e os riscos de vento, as folhas, a chuva, as nuvens e a névoa seguem essa direção.
-- **Chuva:** começa sozinha, escurece o dia, molha a terra arada e traz trovão quando está forte.
-- **Névoa da manhã:** aparece no fim da madrugada e some no meio da manhã. Não existe no deserto.
-- **Nuvens:** ao afastar a câmera até o máximo, tufos de nuvem transparentes fecham as bordas da tela.
-- **Frio:** no inverno, nas noites de outono e na montanha o corpo esfria. A barra azul de frio aparece na interface, a tela vai ficando azulada e, no limite, você perde vida. A fogueira esquenta, e o deserto nunca dá frio.
+O mapa inteiro é desenhado à mão no editor do próprio jogo, aberto pelo menu inicial.
 
-![Campo no inverno, com chão coberto de neve e árvores sem folhas](imagens/inverno.png)
-
-*Inverno no campo.*
-- **Quatro estações de 7 dias cada:**
-
-| Estação | O que muda |
-|---|---|
-| Primavera | Grama verde-viva, pétalas no ar, pássaros no campo |
-| Verão | Dias mais longos, poeira dourada no ar, cigarras |
-| Outono | Folhas alaranjadas caindo, vento frio, noites que esfriam |
-| Inverno | Neve, árvores peladas, escurece bem mais cedo, a fome aperta 35% mais, não dá para plantar e o frio machuca longe do fogo |
-
-### Luas
-A lua tem oito fases e muda a cada dia do jogo, em ciclos de oito dias: lua nova, crescente, quarto crescente, gibosa crescente, **cheia**, gibosa minguante, quarto minguante e minguante. A fase atual aparece no selo do dia.
-
-| Fase | O que muda à noite |
-|---|---|
-| Lua nova | A noite é a mais escura, e os bichos hostis enxergam pouco: dá para passar por perto sem ser notado |
-| Fases do meio | Aos poucos a noite clareia ou escurece |
-| Lua cheia | **Lua de sangue:** a lua fica vermelha e pingando, a luz e a névoa da noite ficam avermelhadas, os monstros ficam 50% mais fortes e aparecem o dobro, e os lobos uivam até no campo |
-
-Ao anoitecer numa lua cheia ou nova, um aviso conta o que esperar. Dormir pula para o dia seguinte e, portanto, para a próxima fase.
-
-### Povos e aldeias
-- **Oito povos:** humanos, orcs, elfos, goblins, **anões**, **gigantes**, **gnomos** e **infernais**, cada um com homens e mulheres, civis, soldados, chefe, falas e construções próprias.
-- **Anões:** baixos, barbudos e obcecados por ferro. Vivem em cavernas com abertura nas montanhas, têm forja, salão e a melhor defesa do jogo. Convocam o exército batendo a bigorna de guerra.
-- **Gigantes:** têm o dobro da altura de um humano, moram em casas de lajes de pedra em pé e são os mais fortes e mais lentos. Convocam o exército com o tambor de guerra.
-- **Gnomos:** minúsculos, de gorro pontudo e barba, inventores e desmontadores de tudo. Moram em casas redondas de madeira com portinholas de latão e oficinas cheias de engrenagens. São rápidos e frágeis, e convocam o exército com a engrenagem de guerra.
-
-![Gnomos e infernais: civis, soldados, chefes e arqueiros](imagens/novos_povos.png)
-
-*Os gnomos, de gorro pontudo, e os infernais, de chifres e olhos de brasa.*
-- **Infernais:** de pele vermelha, roxa ou azulada, chifres e olhos de brasa. Vivem em casas e salões de pedra negra com brasas acesas, e dizem que a noite não escolhe a quem abriga. Convocam o exército com o braseiro de guerra e o gongo.
-- **Humanos neutros:** você sempre é amigo dos humanos. A vila deles é zona neutra: não entra em guerra, não pode ser conquistada e nunca te ataca.
-- **Alianças:** gnomos são amigos dos elfos e gigantes dos orcs, e fechar pacto com um vale para o amigo. Goblins e infernais não têm amigos. Os anões são pacíficos e diplomáticos, donos do metal negro, e o cristal é dos elfos.
-- **Líderes de cada povo:** Rabi, o Ladrão (goblins), Son of the Tree (elfos), Dvalin Veio-Negro (anões), Zulu (orcs) e Brumgar Boca-Larga (gigantes) ficam na aldeia principal, se escondem na guerra e nunca morrem. Os infernais são só inimigos.
-
-![Os líderes: Rabi, Son of the Tree, Dvalin, Zulu e Brumgar](imagens/lideres.png)
-
-*Rabi, Son of the Tree, Dvalin Veio-Negro, Zulu e Brumgar Boca-Larga.*
-- **Sub-aldeias e aldeia principal:** a principal guarda o chefe, com soldados mais fortes e portões trancados. Para chegar lá, é preciso conquistar antes as sub-aldeias daquele povo.
-- **Pacto:** você fecha pacto em uma sub-aldeia, e ele vale para o povo inteiro, inclusive o chefe. Antes do pacto, ninguém te ataca, mas nenhuma porta de aldeia abre para você. Depois, os outros povos viram inimigos.
-- **Níveis:** as aldeias rivais ficam mais fortes com os dias. As do seu povo só vão subir com missões, que ainda serão criadas.
-
-### Reputação com cada povo
-Cada povo guarda uma opinião sobre você, de −100 a 100. Ela aparece na aba **Povos** do caderno (J), e um aviso surge quando a relação muda de faixa.
-
-| O que você faz | Efeito |
-|---|---|
-| Conversar com um civil (primeira vez no dia, por povo) | +2 |
-| Comprar numa barraca | +1 |
-| Fechar pacto | +60 |
-| Roubar de barraca abandonada | −3 |
-| Matar um soldado | −4 |
-| Matar um civil | −10 |
-| Roubar uma casa | −10 |
-| Queimar uma casa | −20 |
-| Conquistar uma aldeia | −30 |
-
-- **Amistosa (40 ou mais):** as barracas daquele povo vendem 20% mais barato, os civis te recebem bem e liberam uma pergunta extra na conversa.
-- **Neutra:** tudo normal.
-- **Hostil (−40 ou menos):** as barracas não vendem, os civis não conversam e recuam quando você chega perto.
-
-### Vida dos NPCs
-- **Rotina:** os civis de aldeia andam e conversam de dia. Quando anoitece ou a chuva aperta, vão até a porta mais próxima e entram; saem de manhã.
-- **Reação a você:** cumprimentam quando você chega perto, com fala diferente de manhã, na chuva e conforme a reputação. Se você estiver de espada ou arco na mão, recuam e pedem para guardar.
-- **Conversas com opções:** os civis dos oito povos têm um menu de perguntas (quem é o povo, que lugar é este, novidades). A novidade muda na segunda vez que você pergunta, e eles lembram que já te conheceram.
-- **Personagens dentro das casas:** interiores podem ter gente lá dentro, com falas em balão, conversa e animação própria.
-- Personagens importantes da história podem ser marcados: eles se escondem na guerra e não morrem.
-
-### Guerra
-- **Convocação:** cada povo chama o exército do seu jeito: **sino** (humanos), **trombeta** (orcs), **harpa** (elfos), **saco de moedas** chacoalhado (goblins), **bigorna** (anões) e **tambor** (gigantes), **engrenagem** com sino (gnomos) e **gongo** no braseiro (infernais).
-- **Exército:** os soldados marcham em formação atrás de você, desviam de obstáculos e lutam com o inimigo. Você luta junto e pode dispensá-los quando quiser.
-- **Ponto de volta:** convocar salva o jogo. Se morrer na guerra, você volta ao lado do chamado, com tudo como estava.
-- **Clima de guerra:** ao pisar na aldeia atacada, a tela fica avermelhada, entram tambores, cinza e fumaça, e a área pisca em vermelho no chão e no minimapa.
-- **Civis:** a maioria corre para dentro das casas, e alguns ficam do lado de fora.
-- **Conquista:** quando os soldados acabam, a aldeia é sua. Os civis saem das casas, tristes e com medo. Você pode entrar, **roubar** ou **queimar** cada casa, e queimar empobrece a aldeia.
-
-### Defesas
-- **Torres de vigia:** veem você e tocam o alarme, e todos os soldados da aldeia vêm atrás.
-- **Torres de arqueiros:** dão o alarme e atiram flechas que dá para desviar.
-- **Portões:** abrem para os soldados saírem, se trancam sozinhos se você chegar perto e reabrem para eles voltarem quando você foge.
-- **Perseguição:** cada soldado tem um limite de distância, ajustável no editor. Se você fugir para longe, eles voltam ao posto.
-
-![Casas queimando](imagens/fogo.png)
-
-### Combate e criaturas
-- Combate em tempo real, com golpes, atordoamento e barras de vida.
-- **Armas na mão:** espada, machado, picareta, enxada, vara de pesca e arco aparecem na mão do personagem, andando e correndo.
-- **Bichos:** esqueleto, zumbi, lobo, vaca, galinha, veado, corvo e sapo, cada um com seus sons e seu jeito de agir.
-- **Gore:** desmembramento conforme a vida cai, sangue vermelho, sangue verde nos zumbis, poeira nos esqueletos e pedaços pelo chão.
-- **O corvo:** matar o primeiro corvo do jogo dispara um presságio: o herói de costas, relâmpagos no horizonte e um trovão. Só acontece uma vez.
-- **Cena de morte para cada assassino:**
-  - **Esqueleto:** arranca seus órgãos, com risada sádica.
-  - **Zumbi:** te come.
-  - **Lobo:** te dilacera e uiva.
-  - **Humano:** uma espadada só.
-  - **Orc:** clava na cabeça.
-  - **Goblins:** vários te furando sem parar.
-  - **Elfo:** flechas, estocada e corte na garganta.
-  - **Anão:** uma picaretada na barriga que atravessa e sai nas costas.
-  - **Gigante:** te ergue, te rasga em dois e joga as metades no chão.
-
-![Cena de morte do elfo](imagens/morte_elfo.png)
-
-### Masmorras e cavernas
-- **Masmorra:** a entrada leva a três salas ligadas por escada, com esqueletos e zumbis. Clique ataca, e uma barra de vida aparece no canto. A escada e o baú só liberam com a sala limpa. O baú do fundo dá moedas, poção, ferro negro, cristal e itens sorteados, uma vez por entrada. Morrer lá dentro toca a cena de morte do bicho que matou.
-- **Caverna:** uma boca na rocha que leva a uma caverna escura, com estalagmites.
-- **Caverna dos anões:** a porta talhada leva à caverna onde eles vivem, com forja, bigorna, lingotes e os anões trabalhando.
-
-### Minérios e armaduras
-- **Itens de cada minério:** espada, armadura e flechas de cobre, ferro, metal negro (o melhor, dos anões) e cristal (dos elfos). A flecha mais forte que você tiver é a que o arco usa.
-- **Craft descoberto:** cada receita só aparece depois que você pega o item ou o minério dela, e o jogo avisa "Novo craft descoberto".
-- **Amuletos de cada povo:** cada um dá habilidades do povo, como velocidade e arco forte dos elfos, mão de forja dos anões, ou fôlego e mochila maior dos gnomos.
-- **Seis minérios:** ferro, carvão, cristal, ferro negro, cobre e enxofre. As rochas de minério só quebram com picareta.
-- **Armaduras de metal:** cobre (+3 de defesa), ferro (+4) e **ferro negro (+7, a melhor)**. Cada uma pede o minério e a armadura do nível anterior.
-- **Barraca de ferro dos anões:** vende minério mais barato que as outras, carvão, ferramentas e as três armaduras.
-
-### Cultivo
-- **Arar:** com a enxada, a terra vira canteiro de verdade, e canteiros vizinhos se emendam numa plantação.
-- **Água:** só se planta a até 8 tiles de água. Terra arada longe da água seca em um minuto. Deserto e montanha são pedra e areia, não solo.
-- **Plantas:** rabanete (3 dias), nabo (4), batata (3), beterraba (5), trigo (6) e maconha (7). Fumar a maconha deixa a tela rosa e ondulando, e depois você apaga e acorda no outro dia.
-- **Inverno:** nada se planta, e o que estiver plantado morre de frio.
-
-![Canteiro com rabanete, nabo, beterraba, trigo e maconha em várias fases](imagens/cultivo.png)
-
-*Cada linha uma planta, da semente até a colheita.*
-
-Mirtilo-branco, lírio-da-geada e cogumelo-lume nascem sozinhos no campo e na floresta, só no inverno, e brilham no escuro enquanto têm fruto. Depois de colhidos, voltam a dar fruto em dois dias. Às vezes vem uma muda, que pode ser plantada em outro lugar. Quando o inverno acaba, todos secam.
-
-![Três plantas brilhando à noite na neve: uma moita de bolinhas brancas, um lírio azul e cogumelos claros](imagens/plantas_inverno.png)
-
-*As plantas do inverno à noite.*
-
-### Ferramentas e pesca
-- **Do chão:** galhos e pedras pequenas aparecem pelo campo e pela floresta e mudam de lugar a cada dia. Árvores derrubadas soltam galhos, e rochas quebradas soltam pedras.
-- **Improvisadas:** espada, machado e picareta de pedra amarrada num galho.
-- **De ferro:** as mesmas, mais fortes. O minério vem das rochas de ferro, quebradas com picareta, ou das barracas.
-- **Na mão:** a ferramenta aparece segurada o tempo todo, e cada uma tem o seu golpe. O machado derruba árvores mais rápido, a picareta quebra rochas mais rápido e a espada aumenta o dano.
-- **Arco:** atira flechas no bicho mais perto, de longe.
-- **Pesca:** de frente para a água, você lança a linha e a boia fica boiando. Quando o peixe morde, aparece "CLIQUE!" e, depois de fisgar, "CLIQUE RÁPIDO!" para puxar até o peixe pular para fora da água.
-
-![Personagem na beira da água puxando um peixe, que pula para fora entre respingos](imagens/pesca.png)
-
-*O peixe saindo da água.*
-
-### Vida no mundo
-- **Dificuldades:**
-  - **Relaxante:** ninguém briga, só você pode. Não tem fome e você entra onde quiser.
-  - **Normal:** o jogo como ele é.
-  - **Difícil:** ao morrer, seus itens ficam no chão por 3 dias; a fome é mais rápida e as aldeias rivais sobem de nível mais rápido.
-- **Fome e descanso:** a fome vai baixando com o tempo, e comida como maçã e pão alimenta. Do fim da tarde até a noite dá para dormir na fogueira, o que salva o jogo e pula para o dia seguinte.
-- **Inventário e craft:** itens, armaduras, amuletos, mochilas, baús e receitas de criar itens no próprio inventário.
-- **Barracas e moedas:** dá para comprar em aldeias que não são inimigas e roubar de graça durante um ataque ou depois da conquista. Dentro da padaria, o balcão também vende.
-- **Interiores 3D:** casas, ocas, salões e uma padaria, cada um por dentro. O sobrado e a torre élfica têm segundo andar.
-- **Escritos fragmentados:** livros e pergaminhos espalhados que você junta aos poucos.
-
-![Interior da padaria](imagens/padaria.png)
-
-### Dormir, acampar e ler
-- **Cama:** nas casas do povo do seu pacto (e nas humanas), a cama deixa você dormir, salvar o jogo e escolher aquela casa como lar.
-- **Fogueira de acampamento:** um craft para quando você está longe de casa. Dá para dormir nela à noite, e ao acordar ela vira cinzas.
-- **Eventos de casa:** em cada vila, uma casa tem chance de guardar uma cena: elfos pegos de surpresa na cama, um orc numa casa ensanguentada jurando que nada aconteceu, um padeiro com serragem na farinha, um goblin cheio de coisas "achadas", um anão chorando abraçado à bigorna, um gigante com ossos de cabra, um gnomo com uma máquina soltando fumaça e um infernal com um "jogo de tabuleiro" cheio de velas.
-
-![Oito cenas de casa, uma de cada povo](imagens/eventos_de_casa.png)
-
-*Uma casa de cada vila guarda uma cena.*
-- **Biblioteca:** uma construção com estantes e uma bibliotecária. Os livros são PDFs convertidos para páginas que você lê dentro do jogo.
-
-![Interior da biblioteca, com estantes e a bibliotecária](imagens/biblioteca.png)
-
-*A biblioteca por dentro.*
-- **A noite:** zumbis, esqueletos, aranhas, fantasmas e goblins de ronda com tocha saem longe das aldeias e das luzes. Os soldados de uma aldeia amiga te protegem, e os que morrem voltam no dia seguinte. Quem conheceu o eremita o vê de longe, à noite, com um olho amarelo, e ele some em fumaça quando você chega perto.
-
-### Editor de mapa
-O jogo tem um editor completo, aberto pelo menu inicial:
 - **Clicar para editar:** clique em qualquer coisa no mapa e as opções dela aparecem ao lado.
 - **Ferramentas:** pintar terreno, mudar o relevo, colocar objetos com busca e categorias, e arrastar muros em linha reta.
 - **Áreas:** demarcar biomas e aldeias dos oito povos, com um resumo do que falta em cada aldeia.
-- **NPCs:** definir raio, rotas e distância de perseguição.
-- **Objetos novos na categoria Mundo:** rochas de minério, entrada de caverna, caverna dos anões e entrada de masmorra.
-- **Teste:** o F5 abre o mapa para clicar onde nascer, e o F1 abre um painel com aldeias prontas, guerra, hora, itens, cenas de morte e o presságio do corvo.
+- **NPCs:** definir raio, rotas e distância de perseguição, e marcar personagens da história.
+- **Teste:** um modo de teste para clicar onde nascer, e um painel para pular o dia, chamar a guerra, dar itens e ver as cenas de morte.
 
-![Editor de mapa](imagens/editor.png)
+---
 
 ## A história
 
 ### O que já está no jogo
+
 **A abertura.** No universo vazio, uma deusa branca aparece e cria a Terra. O Sol vaga ao fundo, ela o alcança e põe a Terra em órbita. Do fundo do vazio, um ser escuro e menor a observa.
 
-**O despertar.** Na escuridão, uma voz suave chama: *"Oii... Olá? Tá tudo bem? Você morreu? Acorda..."* Seus olhos abrem devagar, você vê o céu e uma mulher em silhueta contra o sol: *"Ah, você tá vivo... Quem é você?"* Você se levanta tonto, no mundo aberto.
+**O despertar.** Na escuridão, uma voz suave chama: *"Oii... Olá? Tá tudo bem? Você morreu? Acorda..."* Seus olhos abrem devagar, você vê o céu e uma mulher em silhueta contra o sol: *"Ah, você tá vivo... Quem é você?"*
 
 **A Letícia e a padaria.** Ao acordar, a Letícia está ao seu lado. Ela te convida para a aldeia e vai andando com você até a padaria onde trabalha. Lá dentro, um eremita de um olho só está sentado sozinho num canto; Seu João e Shileno trocam murros discutindo o gosto do Seu João por mecânica; e numa mesa bebem dois orcs, um goblin e um anão, todos exilados dos seus povos por causa da bebida.
 
-**O eremita.** Ele fala dos que foram enterrados de mau jeito e se levantam quando o sol se esconde, e avisa para estar sob um teto, perto do fogo, quando a luz for embora. Pede que você não toque nos corvos. Depois sai da padaria e some. A Letícia vem do balcão e pergunta com quem você estava falando. Ela não viu velho nenhum. Então te ensina a comprar ali mesmo.
+**O eremita.** Ele fala dos que foram enterrados de mau jeito e se levantam quando o sol se esconde, e avisa para estar sob um teto, perto do fogo, quando a luz for embora. Pede que você não toque nos corvos. Depois sai da padaria e some. A Letícia vem do balcão e pergunta com quem você estava falando. Ela não viu velho nenhum.
 
-Para essa cena acontecer, o mapa precisa ter uma padaria: a cena vale para qualquer uma colocada pelo editor.
+### A origem dos povos
 
-**Os escritos.** Três textos de rascunho já podem ser coletados em pedaços: a *Crônica da Luz*, sobre a criação; *O Observador*, um aviso sobre o ser que aprendeu a desfazer o que ela fez; e *Cartas de um Soldado*, sobre a guerra vista de baixo.
+A base da história é a cosmogonia de **Dharavé**. Antes de tudo havia Ekaíon, a Unidade, que se partiu em Ritavard, a ordem, e Khavoros, o caos. Dharavé foi um dos mundos que eles disputaram, e os deuses que desceram ficaram presos nos sete céus de Saptavé. Os que ficaram na matéria foram perdendo o poder até virar os **Ancestrais**, de quem descendem as raças mortais: humanos, elfos, anões, orcs, pequeninos, gnomos, goblins, draconatos, gigantes e infernais. Os que escaparam para o último céu viraram os Deuses da Sétima Morada. Ninguém sabe ao certo por que isso aconteceu.
 
 ### O que está planejado
-O conflito central opõe duas grandes civilizações, e nenhuma delas é boa ou má:
 
-| | **Ordem da Aliança** | **Confederação do Sopro** |
-|---|---|---|
-| Divindade | Um Deus supremo e transcendente | Muitas entidades espirituais |
-| Universo | Criação com propósito | Cosmos vivo e interligado |
-| Moral | Lei sagrada e justiça | Reciprocidade e equilíbrio |
-| Sociedade | Centralizada, com sacerdotes e tribunais | Clãs, aldeias e conselhos de anciãos |
-| Virtude | Unidade e estabilidade | Pluralidade e pertencimento |
-| Perigo | Autoritarismo religioso | Fragmentação e intolerância |
-
-Também haverá povos independentes, com histórias e conflitos próprios: os **Povos do Rio Ancestral**, os **Reinos das Máscaras** e os **Guardiões das Montanhas**, estes últimos com registros de eras anteriores.
-
-Quem segue a Ordem primeiro recebe proteção e prestígio, até descobrir um segredo que compromete os governantes. O conselho então decide eliminar o protagonista. A traição é de alguns líderes, não da fé nem do povo, e sacerdotes e fiéis contrários ao conselho podem ajudar.
+O conflito central opõe duas grandes civilizações, e nenhuma delas é boa ou má: a **Ordem da Aliança**, de um Deus único e de lei sagrada, e a **Confederação do Sopro**, dos povos que veem espírito em tudo. Também haverá povos independentes, como os Povos do Rio Ancestral, os Reinos das Máscaras e os Guardiões das Montanhas.
 
 A pergunta que guia a história é:
 
 > **É possível construir uma ordem universal sem destruir a pluralidade dos povos, ou preservar essa pluralidade exige aceitar um mundo permanentemente dividido?**
 
 ### Próximos passos
-- Missões e a história principal.
+
+- Missões e a história principal, a começar pelos líderes de cada povo.
 - Colocar as aldeias, as cavernas, as masmorras e os minérios no mapa.
 - Armadilhas e variedade nas masmorras.
-- Recompensas maiores por derrubar um chefe ou um povo inteiro.
 - Definir a parte online: a ideia é um MMORPG com história, mas ainda não há rede nem servidor.
+
+---
 
 ## Como é feito
 
 - **Motor:** Godot 4.4, em GDScript. A lógica é em 2D e a imagem é montada em 3D.
-- **Arte:** os personagens principais e as árvores partem de pranchas desenhadas pelo autor. O resto é gerado por scripts em Python, em `tools/`.
-- **Som:** músicas e efeitos gerados por código, mais gravações de domínio público ou CC0.
-- **Créditos:** as gravações usadas são de domínio público ou CC0, e os autores estão creditados dentro do projeto.
+- **Arte:** os personagens principais e as árvores partem de pranchas desenhadas pelo autor. O resto é gerado por scripts em Python.
+- **Som:** músicas e efeitos gerados por código, mais gravações de domínio público ou CC0, com os autores creditados dentro do projeto.
